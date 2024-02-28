@@ -1,5 +1,6 @@
 package ru.flanker.documentsservice.application.category;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -8,6 +9,7 @@ import ru.flanker.documentsservice.domain.exception.CategoryAlreadyExistsExcepti
 import ru.flanker.documentsservice.infrastructure.repository.CategoryRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -29,5 +31,13 @@ public class CategoryService {
 
         log.info("CategoryService.Category | save category with title = {}", category.getName());
         return categoryRepository.save(category);
+    }
+
+    public Category findById(Long id) {
+        return categoryRepository.findById(id)
+                .orElseThrow(() -> {
+                    log.error("Категория с id={} не найдена", id);
+                    return new EntityNotFoundException("Категория не найдена");
+                });
     }
 }

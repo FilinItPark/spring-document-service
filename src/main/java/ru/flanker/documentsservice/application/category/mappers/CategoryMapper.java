@@ -1,4 +1,4 @@
-package ru.flanker.documentsservice.application.mappers;
+package ru.flanker.documentsservice.application.category.mappers;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

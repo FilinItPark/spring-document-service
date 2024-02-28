@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import ru.flanker.documentsservice.domain.valueobject.TimeInfo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -42,5 +43,5 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "document_id")
     )
-    private List<Document> documents;
+    private List<Document> documents = new ArrayList<>();
 }

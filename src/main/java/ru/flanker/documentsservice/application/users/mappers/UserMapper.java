@@ -1,4 +1,4 @@
-package ru.flanker.documentsservice.application.mappers;
+package ru.flanker.documentsservice.application.users.mappers;
 
 import org.mapstruct.Mapper;
 import ru.flanker.documentsservice.domain.entity.User;

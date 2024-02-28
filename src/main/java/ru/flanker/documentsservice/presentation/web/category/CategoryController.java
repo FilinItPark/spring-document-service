@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.flanker.documentsservice.application.category.CategoryService;
-import ru.flanker.documentsservice.application.mappers.CategoryMapper;
+import ru.flanker.documentsservice.application.category.mappers.CategoryMapper;
 import ru.flanker.documentsservice.presentation.web.category.dto.commands.CreateCategoryCommand;
 import ru.flanker.documentsservice.presentation.web.category.dto.queries.CategoryQuery;
 
@@ -27,12 +27,19 @@ public class CategoryController {
     }
 
     @PostMapping
-    public CategoryQuery create(@RequestBody @Valid CreateCategoryCommand command) {
+    public CategoryQuery create(@RequestBody @Valid CreateCategoryCommand command ) {
         final var category = mapper.fromCommandToCategory(command);
 
         final var created = service.createCategory(category);
 
         return mapper.fromCategoryToQuery(created);
+    }
+
+    @GetMapping("/{id}")
+    public CategoryQuery findById(@PathVariable Long id) {
+        final var category = service.findById(id);
+
+        return mapper.fromCategoryToQuery(category);
     }
 
 }

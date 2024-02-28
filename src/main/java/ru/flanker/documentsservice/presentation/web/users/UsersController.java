@@ -1,11 +1,13 @@
 package ru.flanker.documentsservice.presentation.web.users;
 
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import ru.flanker.documentsservice.application.mappers.UserMapper;
+import org.springframework.web.bind.annotation.*;
+import ru.flanker.documentsservice.application.users.mappers.UserMapper;
 import ru.flanker.documentsservice.application.users.UsersService;
+import ru.flanker.documentsservice.domain.entity.User;
+import ru.flanker.documentsservice.presentation.web.document.dto.commands.AttachDocumentsUserCommand;
+import ru.flanker.documentsservice.presentation.web.document.dto.queries.DocumentQuery;
+import ru.flanker.documentsservice.presentation.web.users.dto.commands.CreateUserCommand;
 import ru.flanker.documentsservice.presentation.web.users.dto.queries.UserQuery;
 
 import java.util.List;
@@ -22,5 +24,23 @@ public class UsersController {
         final var users = usersService.getUsers();
 
         return mapper.fromUsersToQueries(users);
+    }
+
+    /**
+     * @param command - запрос на создание нового пользователя
+     * @return ID созданной записи
+     */
+    @PostMapping
+    public Long create(@RequestBody CreateUserCommand command) {
+        final var user = mapper.fromCommandToUser(command);
+
+        return usersService.create(user);
+    }
+
+    @PutMapping
+    public UserQuery attachDocuments(@RequestBody AttachDocumentsUserCommand command) {
+        final var updatedUser = usersService.attachDocuments(command.getUserId(), command.getDocumentIds());
+
+        return mapper.fromUserToQuery(updatedUser);
     }
 }
