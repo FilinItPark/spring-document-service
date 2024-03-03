@@ -11,8 +11,8 @@ import ru.flanker.documentsservice.domain.valueobject.TimeInfo;
 @Setter
 @ToString
 @AllArgsConstructor
-@Table(name = "applications")
-public class Application {
+@Table(name = "requests")
+public class Requests {
 
     @Id
     @SequenceGenerator(name = "applications_id_sequence", sequenceName = "applications_id_seq")

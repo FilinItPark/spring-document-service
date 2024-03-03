@@ -8,12 +8,19 @@ import ru.flanker.documentsservice.application.category.CategoryService;
 import ru.flanker.documentsservice.application.category.mappers.CategoryMapper;
 import ru.flanker.documentsservice.presentation.web.category.dto.commands.CreateCategoryCommand;
 import ru.flanker.documentsservice.presentation.web.category.dto.queries.CategoryQuery;
-
+import static ru.flanker.documentsservice.infrastructure.routes.CategoryRoutes.*;
 import java.util.List;
+
+/*
+1) migrations (liquibase)
+2) test (unit + testcontainers-integration tests)
+3) swagger
+4) Pagination
+ */
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("api/category")
+@RequestMapping(BASE)
 @Validated
 public class CategoryController {
     private final CategoryMapper mapper;
@@ -27,7 +34,7 @@ public class CategoryController {
     }
 
     @PostMapping
-    public CategoryQuery create(@RequestBody @Valid CreateCategoryCommand command ) {
+    public CategoryQuery create(@RequestBody @Valid CreateCategoryCommand command) {
         final var category = mapper.fromCommandToCategory(command);
 
         final var created = service.createCategory(category);
@@ -35,11 +42,10 @@ public class CategoryController {
         return mapper.fromCategoryToQuery(created);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping(FIND_BY_ID)
     public CategoryQuery findById(@PathVariable Long id) {
         final var category = service.findById(id);
 
         return mapper.fromCategoryToQuery(category);
     }
-
 }
