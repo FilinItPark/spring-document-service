@@ -1,64 +1,218 @@
-2024-03-01 22:49:05 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 96707 (/Users/ivanberezuckij/it-park/lessons/spring/documents-service/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/it-park/lessons/spring/documents-service)
-2024-03-01 22:49:05 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-01 22:49:05 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-03-01 22:49:05 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-03-01 22:49:05 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/it-park/lessons/spring/documents-service/compose.yaml'
-2024-03-01 22:49:06 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-01 22:49:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-01 22:49:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
-2024-03-01 22:49:06 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-01 22:49:06 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-01 22:49:06 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-01 22:49:06 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-01 22:49:06 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 603 ms
-2024-03-01 22:49:06 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-01 22:49:06 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-01 22:49:06 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-01 22:49:06 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-01 22:49:06 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
-2024-03-01 22:49:07 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c92c217
-2024-03-01 22:49:07 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
-2024-03-01 22:49:07 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-01 22:49:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-01 22:49:07 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-01 22:49:07 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-01 22:49:07 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-01 22:49:07 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 2.69 seconds (process running for 2.996)
-2024-03-01 22:49:29 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-01 22:49:29 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-01 22:49:29 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2024-03-01 22:50:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-01 22:50:01 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
-2024-03-01 22:50:01 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
-2024-03-01 22:50:22 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 96783 (/Users/ivanberezuckij/it-park/lessons/spring/documents-service/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/it-park/lessons/spring/documents-service)
-2024-03-01 22:50:22 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-01 22:50:22 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-03-01 22:50:22 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-03-01 22:50:22 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/it-park/lessons/spring/documents-service/compose.yaml'
-2024-03-01 22:50:23 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-01 22:50:23 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-01 22:50:23 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
-2024-03-01 22:50:24 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-01 22:50:24 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-01 22:50:24 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-01 22:50:24 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-01 22:50:24 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 536 ms
-2024-03-01 22:50:24 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-01 22:50:24 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-01 22:50:24 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-01 22:50:24 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-01 22:50:24 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
-2024-03-01 22:50:24 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c55aa38
-2024-03-01 22:50:24 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
-2024-03-01 22:50:24 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-01 22:50:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-01 22:50:25 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-01 22:50:25 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-01 22:50:25 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-01 22:50:25 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 2.51 seconds (process running for 2.937)
-2024-03-01 22:50:34 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-01 22:50:34 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-01 22:50:34 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2024-03-01 22:50:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-01 22:50:46 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
-2024-03-01 22:50:46 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2024-03-17 13:32:28 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 82347 (/Users/ivanberezuckij/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/it-park/lessons/spring/documents-service-app/backend)
+2024-03-17 13:32:28 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-03-17 13:32:28 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-17 13:32:28 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-17 13:32:28 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
+2024-03-17 13:32:29 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
+2024-03-17 13:32:29 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-17 13:32:29 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 30 ms. Found 4 JPA repository interfaces.
+2024-03-17 13:32:29 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
+2024-03-17 13:32:29 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2024-03-17 13:32:29 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-17 13:32:29 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2024-03-17 13:32:29 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 715 ms
+2024-03-17 13:32:29 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-17 13:32:29 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-17 13:32:30 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
+2024-03-17 13:32:30 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-17 13:32:30 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2024-03-17 13:32:30 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@508e85bd
+2024-03-17 13:32:30 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2024-03-17 13:32:30 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-17 13:32:31 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - SQL Warning Code: 0, SQLState: 00000
+2024-03-17 13:32:31 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - constraint "uk_t8o6pivur7nn124jehx7cygw5" of relation "categories" does not exist, skipping
+2024-03-17 13:32:31 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - SQL Warning Code: 0, SQLState: 00000
+2024-03-17 13:32:31 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - constraint "uk_f2ja8c7khxmlkq1y8c1gfchbf" of relation "documents" does not exist, skipping
+2024-03-17 13:32:31 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - SQL Warning Code: 0, SQLState: 00000
+2024-03-17 13:32:31 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - constraint "uk_gypg2ymwawpc57w1v04anol3q" of relation "requests" does not exist, skipping
+2024-03-17 13:32:31 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - SQL Warning Code: 0, SQLState: 00000
+2024-03-17 13:32:31 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - constraint "uk_6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2024-03-17 13:32:31 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-17 13:32:31 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-17 13:32:31 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
+2024-03-17 13:32:31 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
+2024-03-17 13:32:31 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 3.496 seconds (process running for 4.108)
+2024-03-17 13:59:34 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-17 13:59:34 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2024-03-17 13:59:34 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 4 ms
+2024-03-17 14:00:47 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener onApplicationEvent - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-03-17 14:00:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-17 14:00:47 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2024-03-17 14:00:47 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2024-03-17 14:00:47 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 82347 (/Users/ivanberezuckij/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/it-park/lessons/spring/documents-service-app/backend)
+2024-03-17 14:00:47 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-03-17 14:00:47 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
+2024-03-17 14:00:48 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
+2024-03-17 14:00:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-17 14:00:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 8 ms. Found 4 JPA repository interfaces.
+2024-03-17 14:00:48 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
+2024-03-17 14:00:48 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2024-03-17 14:00:48 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-17 14:00:48 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2024-03-17 14:00:48 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 191 ms
+2024-03-17 14:00:49 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-17 14:00:49 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
+2024-03-17 14:00:49 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-17 14:00:49 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-2 - Starting...
+2024-03-17 14:00:49 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1a0b8c47
+2024-03-17 14:00:49 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-2 - Start completed.
+2024-03-17 14:00:49 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-17 14:00:49 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-17 14:00:49 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-17 14:00:49 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
+2024-03-17 14:00:49 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
+2024-03-17 14:00:49 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 1.749 seconds (process running for 1701.966)
+2024-03-17 14:00:49 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener onApplicationEvent - Condition evaluation unchanged
+2024-03-17 14:00:52 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-17 14:00:52 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2024-03-17 14:00:52 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2024-03-17 14:01:28 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:01:28 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravo@mail.ru) already exists.
+2024-03-17 14:01:28 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravo@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:01:28 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravo@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:01:41 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:01:41 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravo@mail.ru) already exists.
+2024-03-17 14:01:41 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravo@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:01:41 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravo@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:01:55 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:01:55 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravo@mail.ru) already exists.
+2024-03-17 14:01:55 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravo@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:01:55 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravo@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:03:02 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:03:02 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoec@mail.ru) already exists.
+2024-03-17 14:03:02 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoec@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:03:02 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravoec@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:04:27 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:04:27 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.
+2024-03-17 14:04:27 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:04:27 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:05:14 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener onApplicationEvent - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-03-17 14:05:14 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-17 14:05:14 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-2 - Shutdown initiated...
+2024-03-17 14:05:14 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-2 - Shutdown completed.
+2024-03-17 14:05:14 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 82347 (/Users/ivanberezuckij/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/it-park/lessons/spring/documents-service-app/backend)
+2024-03-17 14:05:14 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-03-17 14:05:14 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
+2024-03-17 14:05:14 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
+2024-03-17 14:05:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-17 14:05:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2024-03-17 14:05:15 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
+2024-03-17 14:05:15 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2024-03-17 14:05:15 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-17 14:05:15 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2024-03-17 14:05:15 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 409 ms
+2024-03-17 14:05:15 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-17 14:05:15 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
+2024-03-17 14:05:15 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-17 14:05:15 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-3 - Starting...
+2024-03-17 14:05:15 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@e065f96
+2024-03-17 14:05:15 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-3 - Start completed.
+2024-03-17 14:05:15 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-17 14:05:15 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-17 14:05:16 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-17 14:05:16 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
+2024-03-17 14:05:16 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
+2024-03-17 14:05:16 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 1.93 seconds (process running for 1968.747)
+2024-03-17 14:05:16 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener onApplicationEvent - Condition evaluation unchanged
+2024-03-17 14:05:42 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-17 14:05:42 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2024-03-17 14:05:42 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 3 ms
+2024-03-17 14:05:42 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:05:42 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.
+2024-03-17 14:05:42 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:05:42 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:05:51 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:05:51 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.
+2024-03-17 14:05:51 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:05:51 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:05:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-17 14:05:55 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-3 - Shutdown initiated...
+2024-03-17 14:05:55 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-3 - Shutdown completed.
+2024-03-17 14:05:58 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 84413 (/Users/ivanberezuckij/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/it-park/lessons/spring/documents-service-app/backend)
+2024-03-17 14:05:58 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-03-17 14:05:58 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-17 14:05:58 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-17 14:05:58 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
+2024-03-17 14:05:59 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
+2024-03-17 14:05:59 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-17 14:05:59 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 4 JPA repository interfaces.
+2024-03-17 14:05:59 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
+2024-03-17 14:05:59 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2024-03-17 14:05:59 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-17 14:05:59 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2024-03-17 14:05:59 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 637 ms
+2024-03-17 14:05:59 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-17 14:05:59 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-17 14:05:59 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
+2024-03-17 14:05:59 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-17 14:05:59 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2024-03-17 14:06:00 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6dc2fa8e
+2024-03-17 14:06:00 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2024-03-17 14:06:00 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-17 14:06:00 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-17 14:06:01 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-17 14:06:01 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
+2024-03-17 14:06:01 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
+2024-03-17 14:06:01 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 3.003 seconds (process running for 3.332)
+2024-03-17 14:06:03 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-17 14:06:03 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2024-03-17 14:06:03 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2024-03-17 14:06:03 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:06:03 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.
+2024-03-17 14:06:03 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:06:03 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:06:38 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:06:38 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.
+2024-03-17 14:06:38 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:06:38 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:06:41 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:06:41 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.
+2024-03-17 14:06:41 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:06:41 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:06:55 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:06:55 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.
+2024-03-17 14:06:56 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:06:56 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:07:07 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:07:07 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.
+2024-03-17 14:07:07 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:07:07 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:07:16 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:07:16 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.
+2024-03-17 14:07:16 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:07:16 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:09:09 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - SQL Error: 0, SQLState: 23505
+2024-03-17 14:09:09 ERROR o.h.e.jdbc.spi.SqlExceptionHelper logExceptions - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.
+2024-03-17 14:09:09 ERROR r.f.d.d.exception.ExceptionAdvice handleBadRequestException - could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]
+2024-03-17 14:09:09 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"<EOL>  Подробности: Key (email)=(santiago_bravoecr@mail.ru) already exists.] [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; SQL [insert into users (email,name,password,created_at,deleted_at,updated_at,id) values (?,?,?,?,?,?,?)]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]]
+2024-03-17 14:09:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-17 14:09:43 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2024-03-17 14:09:43 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.

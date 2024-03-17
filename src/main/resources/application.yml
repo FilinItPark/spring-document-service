@@ -10,6 +10,7 @@ spring:
     url: jdbc:postgresql://localhost:6432/document_db
     username: document_user
     password: secret
+    driver-class-name: org.postgresql.Driver
 
 logging:
   pattern:

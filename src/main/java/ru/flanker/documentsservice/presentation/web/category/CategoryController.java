@@ -16,7 +16,9 @@ import java.util.List;
 2) test (unit + testcontainers-integration tests)
 3) swagger
 4) Pagination
- */
+5) auth/signup
+6) jwt + spring security
+*/
 
 @RestController
 @RequiredArgsConstructor

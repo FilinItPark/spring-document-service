@@ -58,4 +58,16 @@ public class UsersService {
 
     }
 
+    public User auth(String email, String password) {
+        User user = userRepository.findByEmail(email).orElseThrow(() -> {
+            log.error("Пользователь с email={} не найден", email);
+            return new EntityNotFoundException("Пользователь не найден");
+        });
+
+        if (user.getPassword().equals(password)) {
+            return user;
+        }
+
+        throw new IllegalArgumentException("Неверный пароль");
+    }
 }

@@ -46,7 +46,7 @@ public class ExceptionAdvice {
     public ApiError handleBadRequestException(RuntimeException exception) {
         log.error("{}", exception.getMessage());
         return ApiError.builder()
-                .message(exception.getMessage())
+                .message("Дубликат")
                 .status(HttpStatus.BAD_REQUEST)
                 .type(ApiErrorType.BUSINESS).build();
 

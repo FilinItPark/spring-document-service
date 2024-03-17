@@ -8,12 +8,14 @@ import ru.flanker.documentsservice.domain.entity.User;
 import ru.flanker.documentsservice.presentation.web.document.dto.commands.AttachDocumentsUserCommand;
 import ru.flanker.documentsservice.presentation.web.document.dto.queries.DocumentQuery;
 import ru.flanker.documentsservice.presentation.web.users.dto.commands.CreateUserCommand;
+import ru.flanker.documentsservice.presentation.web.users.dto.queries.AuthUserQuery;
 import ru.flanker.documentsservice.presentation.web.users.dto.queries.UserQuery;
 
 import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@CrossOrigin(origins = "*")
 @RequestMapping("api/users")
 public class UsersController {
     private final UsersService usersService;
@@ -25,6 +27,14 @@ public class UsersController {
 
         return mapper.fromUsersToQueries(users);
     }
+
+    @PostMapping("/auth")
+    public UserQuery auth(@RequestBody AuthUserQuery query) {
+        final var user = usersService.auth(query.getEmail(), query.getPassword());
+
+        return mapper.fromUserToQuery(user);
+    }
+
 
     /**
      * @param command - запрос на создание нового пользователя
