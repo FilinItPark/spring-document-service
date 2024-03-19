@@ -1,5 +1,9 @@
 package ru.flanker.documentsservice.presentation.web.users;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import ru.flanker.documentsservice.application.users.mappers.UserMapper;
@@ -29,6 +33,20 @@ public class UsersController {
     }
 
     @PostMapping("/auth")
+    @Operation(summary = "Авторизация пользователя",
+            description = "Принимает почта и пароля пользователя и возвращает объект",
+            tags = {"Auth&Signup"},
+            responses = {
+                    @ApiResponse(
+                            description = "OK",
+                            responseCode = "200",
+                            content = @Content(
+                                    mediaType = "application/json",
+                                    schema = @Schema(implementation = UserQuery.class)
+                            )
+                    ),
+                    @ApiResponse(description = "Неверные данные", responseCode = "400", content = @Content(mediaType = "application/json"))
+            })
     public UserQuery auth(@RequestBody AuthUserQuery query) {
         final var user = usersService.auth(query.getEmail(), query.getPassword());
 
@@ -41,10 +59,17 @@ public class UsersController {
      * @return ID созданной записи
      */
     @PostMapping
-    public Long create(@RequestBody CreateUserCommand command) {
+    @Operation(summary = "Регистрация пользователя",
+            description = "Принимает информацию о пользователе и возвращает информацию о нем",
+            tags = {"Auth&Signup"},
+            responses = {
+                    @ApiResponse(description = "OK", responseCode = "200", content = @Content(mediaType = "application/json")),
+                    @ApiResponse(description = "User Already Exists", responseCode = "400", content = @Content(mediaType = "application/json"))
+            })
+    public UserQuery create(@RequestBody CreateUserCommand command) {
         final var user = mapper.fromCommandToUser(command);
 
-        return usersService.create(user);
+        return mapper.fromUserToQuery(usersService.create(user));
     }
 
     @PutMapping
