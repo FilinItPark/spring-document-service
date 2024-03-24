@@ -8,7 +8,9 @@ import ru.flanker.documentsservice.application.category.CategoryService;
 import ru.flanker.documentsservice.application.category.mappers.CategoryMapper;
 import ru.flanker.documentsservice.presentation.web.category.dto.commands.CreateCategoryCommand;
 import ru.flanker.documentsservice.presentation.web.category.dto.queries.CategoryQuery;
+
 import static ru.flanker.documentsservice.infrastructure.routes.CategoryRoutes.*;
+
 import java.util.List;
 
 /*
@@ -22,6 +24,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.OPTIONS, RequestMethod.HEAD})
 @RequestMapping(BASE)
 @Validated
 public class CategoryController {
