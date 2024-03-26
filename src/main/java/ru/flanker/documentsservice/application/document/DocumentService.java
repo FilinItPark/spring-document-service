@@ -44,4 +44,10 @@ public class DocumentService {
     public List<Document> findByIds(List<Long> documentIds) {
         return documentRepository.findAllById(documentIds);
     }
+
+    public List<Document> getDocumentsInCategory(Long categoryId) {
+        log.debug("Пытаемся получить документы в категории с id={}", categoryId);
+
+        return documentRepository.findByCategory_Id(categoryId);
+    }
 }

@@ -1,9 +1,8 @@
 package ru.flanker.documentsservice.presentation.web.users.dto.queries;
 
 import lombok.Data;
-import ru.flanker.documentsservice.domain.entity.Document;
 import ru.flanker.documentsservice.domain.valueobject.TimeInfo;
-import ru.flanker.documentsservice.presentation.web.document.dto.queries.DocumentQuery;
+import ru.flanker.documentsservice.presentation.web.document.dto.queries.GetDocumentQuery;
 
 import java.util.List;
 
@@ -13,5 +12,5 @@ public class UserQuery {
     String name;
     String email;
     TimeInfo timeInfo;
-    List<DocumentQuery> documents;
+    List<GetDocumentQuery> documents;
 }

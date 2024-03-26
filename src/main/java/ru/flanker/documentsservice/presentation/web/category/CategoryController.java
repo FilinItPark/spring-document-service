@@ -7,11 +7,12 @@ import org.springframework.web.bind.annotation.*;
 import ru.flanker.documentsservice.application.category.CategoryService;
 import ru.flanker.documentsservice.application.category.mappers.CategoryMapper;
 import ru.flanker.documentsservice.presentation.web.category.dto.commands.CreateCategoryCommand;
-import ru.flanker.documentsservice.presentation.web.category.dto.queries.CategoryQuery;
-
-import static ru.flanker.documentsservice.infrastructure.routes.CategoryRoutes.*;
+import ru.flanker.documentsservice.presentation.web.category.dto.queries.GetCategoryResponse;
+import ru.flanker.documentsservice.presentation.web.category.dto.queries.GetDocumentsInCategoryResponse;
 
 import java.util.List;
+
+import static ru.flanker.documentsservice.infrastructure.routes.CategoryRoutes.*;
 
 /*
 1) migrations (liquibase)
@@ -32,14 +33,14 @@ public class CategoryController {
     private final CategoryService service;
 
     @GetMapping
-    public List<CategoryQuery> findAll() {
+    public List<GetCategoryResponse> findAll() {
         final var categories = service.findAll();
 
         return mapper.fromCategoriesToQueries(categories);
     }
 
     @PostMapping
-    public CategoryQuery create(@RequestBody @Valid CreateCategoryCommand command) {
+    public GetCategoryResponse create(@RequestBody @Valid CreateCategoryCommand command) {
         final var category = mapper.fromCommandToCategory(command);
 
         final var created = service.createCategory(category);
@@ -48,9 +49,11 @@ public class CategoryController {
     }
 
     @GetMapping(FIND_BY_ID)
-    public CategoryQuery findById(@PathVariable Long id) {
+    public GetCategoryResponse findById(@PathVariable Long id) {
         final var category = service.findById(id);
 
         return mapper.fromCategoryToQuery(category);
     }
+
+
 }

@@ -40,4 +40,5 @@ public class CategoryService {
                     return new EntityNotFoundException("Категория не найдена");
                 });
     }
+
 }

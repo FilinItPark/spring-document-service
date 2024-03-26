@@ -1,421 +1,225 @@
-2024-03-24 12:34:14 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 2146 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
-2024-03-24 12:34:14 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-24 12:34:14 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-03-24 12:34:14 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-03-24 12:34:14 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
-2024-03-24 12:34:16 ERROR o.s.boot.SpringApplication reportFailure - Application run failed
-org.springframework.boot.docker.compose.core.DockerNotRunningException: Docker is not running
-	at org.springframework.boot.docker.compose.core.DockerCli$DockerCommands.getDockerCommand(DockerCli.java:146)
-	at org.springframework.boot.docker.compose.core.DockerCli$DockerCommands.<init>(DockerCli.java:129)
-	at org.springframework.boot.docker.compose.core.DockerCli.lambda$new$0(DockerCli.java:65)
-	at java.base/java.util.HashMap.computeIfAbsent(HashMap.java:1220)
-	at org.springframework.boot.docker.compose.core.DockerCli.<init>(DockerCli.java:64)
-	at org.springframework.boot.docker.compose.core.DockerCompose.get(DockerCompose.java:92)
-	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.getDockerCompose(DockerComposeLifecycleManager.java:154)
-	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.start(DockerComposeLifecycleManager.java:110)
-	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:53)
-	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:35)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
-	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
-	at org.springframework.boot.context.event.EventPublishingRunListener.contextLoaded(EventPublishingRunListener.java:98)
-	at org.springframework.boot.SpringApplicationRunListeners.lambda$contextLoaded$4(SpringApplicationRunListeners.java:72)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
-	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
-	at org.springframework.boot.SpringApplicationRunListeners.contextLoaded(SpringApplicationRunListeners.java:72)
-	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:432)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at ru.flanker.documentsservice.DocumentsServiceApplication.main(DocumentsServiceApplication.java:10)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: org.springframework.boot.docker.compose.core.ProcessExitException: 'docker version --format {{.Client.Version}}' failed with exit code 1.
-
-Stdout:
-25.0.2
-
-
-Stderr:
-Cannot connect to the Docker daemon at unix:///Users/ivanberezuckij/.docker/run/docker.sock. Is the docker daemon running?
-
-	at org.springframework.boot.docker.compose.core.ProcessRunner.run(ProcessRunner.java:96)
-	at org.springframework.boot.docker.compose.core.ProcessRunner.run(ProcessRunner.java:74)
-	at org.springframework.boot.docker.compose.core.DockerCli$DockerCommands.getDockerCommand(DockerCli.java:135)
-	... 30 common frames omitted
-2024-03-24 13:08:16 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 2836 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
-2024-03-24 13:08:16 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-24 13:08:16 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-03-24 13:08:16 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-03-24 13:08:16 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
-2024-03-24 13:08:20 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-24 13:08:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-24 13:08:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 29 ms. Found 4 JPA repository interfaces.
-2024-03-24 13:08:21 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-24 13:08:21 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-24 13:08:21 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-24 13:08:21 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-24 13:08:21 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 771 ms
-2024-03-24 13:08:21 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-24 13:08:21 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-24 13:08:21 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-24 13:08:21 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-24 13:08:21 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
-2024-03-24 13:08:22 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@46d6484a
-2024-03-24 13:08:22 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
-2024-03-24 13:08:22 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-24 13:08:22 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - SQL Warning Code: 0, SQLState: 00000
-2024-03-24 13:08:22 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - constraint "uk_t8o6pivur7nn124jehx7cygw5" of relation "categories" does not exist, skipping
-2024-03-24 13:08:22 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - SQL Warning Code: 0, SQLState: 00000
-2024-03-24 13:08:22 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - constraint "uk_f2ja8c7khxmlkq1y8c1gfchbf" of relation "documents" does not exist, skipping
-2024-03-24 13:08:22 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - SQL Warning Code: 0, SQLState: 00000
-2024-03-24 13:08:22 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - constraint "uk_gypg2ymwawpc57w1v04anol3q" of relation "requests" does not exist, skipping
-2024-03-24 13:08:22 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - SQL Warning Code: 0, SQLState: 00000
-2024-03-24 13:08:22 WARN  o.h.e.jdbc.spi.SqlExceptionHelper logWarning - constraint "uk_6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
-2024-03-24 13:08:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:08:22 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-24 13:08:23 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-24 13:08:23 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-24 13:08:23 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 7.389 seconds (process running for 7.903)
-2024-03-24 13:08:25 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-24 13:08:25 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-24 13:08:25 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2024-03-24 13:08:26 INFO  o.s.api.AbstractOpenApiResource getOpenApi - Init duration for springdoc-openapi is: 235 ms
-2024-03-24 13:49:58 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener onApplicationEvent - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2024-03-24 13:49:58 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:49:58 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
-2024-03-24 13:49:58 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
-2024-03-24 13:49:58 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 2836 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
-2024-03-24 13:49:58 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-24 13:49:58 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
-2024-03-24 13:49:59 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-24 13:49:59 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-24 13:49:59 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 7 ms. Found 4 JPA repository interfaces.
-2024-03-24 13:49:59 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-24 13:49:59 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-24 13:49:59 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-24 13:49:59 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-24 13:49:59 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 209 ms
-2024-03-24 13:49:59 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-24 13:49:59 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-24 13:49:59 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-24 13:49:59 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-2 - Starting...
-2024-03-24 13:49:59 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@6361d010
-2024-03-24 13:49:59 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-2 - Start completed.
-2024-03-24 13:49:59 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-24 13:49:59 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:49:59 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-24 13:49:59 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-24 13:49:59 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-24 13:49:59 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 1.404 seconds (process running for 2504.626)
-2024-03-24 13:49:59 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener onApplicationEvent - Condition evaluation unchanged
-2024-03-24 13:50:03 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-24 13:50:03 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-24 13:50:03 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 0 ms
-2024-03-24 13:50:27 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener onApplicationEvent - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2024-03-24 13:50:27 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:50:27 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-2 - Shutdown initiated...
-2024-03-24 13:50:27 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-2 - Shutdown completed.
-2024-03-24 13:50:27 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 2836 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
-2024-03-24 13:50:27 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-24 13:50:27 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
-2024-03-24 13:50:27 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-24 13:50:27 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-24 13:50:27 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 7 ms. Found 4 JPA repository interfaces.
-2024-03-24 13:50:27 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-24 13:50:27 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-24 13:50:27 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-24 13:50:27 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-24 13:50:27 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 157 ms
-2024-03-24 13:50:27 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-24 13:50:27 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-24 13:50:27 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-24 13:50:27 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-3 - Starting...
-2024-03-24 13:50:27 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@184850a5
-2024-03-24 13:50:27 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-3 - Start completed.
-2024-03-24 13:50:27 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-24 13:50:28 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:50:28 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-24 13:50:28 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-24 13:50:28 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-24 13:50:28 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 1.061 seconds (process running for 2532.848)
-2024-03-24 13:50:28 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener onApplicationEvent - Condition evaluation unchanged
-2024-03-24 13:50:30 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-24 13:50:30 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-24 13:50:30 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 0 ms
-2024-03-24 13:50:50 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:50:50 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-3 - Shutdown initiated...
-2024-03-24 13:50:50 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-3 - Shutdown completed.
-2024-03-24 13:50:56 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 3898 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
-2024-03-24 13:50:56 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-24 13:50:56 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-03-24 13:50:56 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-03-24 13:50:56 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
-2024-03-24 13:50:57 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-24 13:50:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-24 13:50:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 30 ms. Found 4 JPA repository interfaces.
-2024-03-24 13:50:58 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-24 13:50:58 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-24 13:50:58 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-24 13:50:58 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-24 13:50:58 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 748 ms
-2024-03-24 13:50:58 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-24 13:50:58 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-24 13:50:58 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-24 13:50:58 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-24 13:50:58 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
-2024-03-24 13:50:58 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@55768cda
-2024-03-24 13:50:58 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
-2024-03-24 13:50:59 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-24 13:50:59 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:50:59 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-24 13:50:59 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-24 13:50:59 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-24 13:50:59 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 3.399 seconds (process running for 4.068)
-2024-03-24 13:51:02 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-24 13:51:02 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-24 13:51:02 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2024-03-24 13:51:36 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener onApplicationEvent - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2024-03-24 13:51:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:51:36 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
-2024-03-24 13:51:36 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
-2024-03-24 13:51:36 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 3898 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
-2024-03-24 13:51:36 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-24 13:51:36 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
-2024-03-24 13:51:37 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-24 13:51:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-24 13:51:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 8 ms. Found 4 JPA repository interfaces.
-2024-03-24 13:51:37 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-24 13:51:37 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-24 13:51:37 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-24 13:51:37 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-24 13:51:37 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 190 ms
-2024-03-24 13:51:37 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-24 13:51:37 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-24 13:51:37 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-24 13:51:37 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-2 - Starting...
-2024-03-24 13:51:37 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@367d9dbf
-2024-03-24 13:51:37 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-2 - Start completed.
-2024-03-24 13:51:37 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-24 13:51:37 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:51:37 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-24 13:51:37 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-24 13:51:37 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-24 13:51:37 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 1.062 seconds (process running for 41.986)
-2024-03-24 13:51:37 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener onApplicationEvent - Condition evaluation unchanged
-2024-03-24 13:51:54 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-24 13:51:54 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-24 13:51:54 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2024-03-24 13:51:56 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener onApplicationEvent - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2024-03-24 13:51:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:51:56 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-2 - Shutdown initiated...
-2024-03-24 13:51:56 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-2 - Shutdown completed.
-2024-03-24 13:51:56 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 3898 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
-2024-03-24 13:51:56 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-24 13:51:56 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
-2024-03-24 13:51:57 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-24 13:51:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-24 13:51:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 6 ms. Found 4 JPA repository interfaces.
-2024-03-24 13:51:57 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-24 13:51:57 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-24 13:51:57 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-24 13:51:57 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-24 13:51:57 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 159 ms
-2024-03-24 13:51:57 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-24 13:51:57 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-24 13:51:57 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-24 13:51:57 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-3 - Starting...
-2024-03-24 13:51:57 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@220897ae
-2024-03-24 13:51:57 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-3 - Start completed.
-2024-03-24 13:51:57 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-24 13:51:57 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:51:57 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-24 13:51:57 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-24 13:51:57 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-24 13:51:57 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 1.061 seconds (process running for 61.664)
-2024-03-24 13:51:57 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener onApplicationEvent - Condition evaluation unchanged
-2024-03-24 13:52:01 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-24 13:52:01 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-24 13:52:01 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2024-03-24 13:52:06 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:52:06 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-3 - Shutdown initiated...
-2024-03-24 13:52:06 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-3 - Shutdown completed.
-2024-03-24 13:52:08 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 3970 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
-2024-03-24 13:52:08 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-24 13:52:08 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-03-24 13:52:08 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-03-24 13:52:08 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
-2024-03-24 13:52:09 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-24 13:52:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-24 13:52:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
-2024-03-24 13:52:10 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-24 13:52:10 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-24 13:52:10 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-24 13:52:10 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-24 13:52:10 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 730 ms
-2024-03-24 13:52:10 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-24 13:52:10 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-24 13:52:10 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-24 13:52:10 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-24 13:52:10 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
-2024-03-24 13:52:10 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f2c0f08
-2024-03-24 13:52:10 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
-2024-03-24 13:52:10 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-24 13:52:11 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:52:11 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-24 13:52:11 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-24 13:52:11 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-24 13:52:11 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 3.034 seconds (process running for 3.34)
-2024-03-24 13:52:13 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-24 13:52:13 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-24 13:52:13 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2024-03-24 13:54:11 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:54:11 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
-2024-03-24 13:54:11 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
-2024-03-24 13:54:46 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 4015 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
-2024-03-24 13:54:46 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-24 13:54:46 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-03-24 13:54:46 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-03-24 13:54:46 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
-2024-03-24 13:54:46 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-24 13:54:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-24 13:54:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
-2024-03-24 13:54:47 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-24 13:54:47 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-24 13:54:47 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-24 13:54:47 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-24 13:54:47 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 706 ms
-2024-03-24 13:54:47 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-24 13:54:47 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-24 13:54:47 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-24 13:54:47 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-24 13:54:47 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
-2024-03-24 13:54:47 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@757e36d2
-2024-03-24 13:54:47 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
-2024-03-24 13:54:48 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-24 13:54:48 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:54:48 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-24 13:54:49 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-24 13:54:49 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-24 13:54:49 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 3.074 seconds (process running for 3.539)
-2024-03-24 13:54:54 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-24 13:54:54 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-24 13:54:54 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2024-03-24 13:54:54 ERROR r.f.d.d.exception.ExceptionAdvice handleException - When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
-2024-03-24 13:54:54 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.]
-2024-03-24 13:56:00 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:56:00 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
-2024-03-24 13:56:00 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
-2024-03-24 13:56:01 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 4055 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
-2024-03-24 13:56:01 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-24 13:56:01 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-03-24 13:56:01 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-03-24 13:56:01 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
-2024-03-24 13:56:02 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-24 13:56:02 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-24 13:56:02 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
-2024-03-24 13:56:03 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-24 13:56:03 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-24 13:56:03 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-24 13:56:03 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-24 13:56:03 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 721 ms
-2024-03-24 13:56:03 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-24 13:56:03 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-24 13:56:03 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-24 13:56:03 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-24 13:56:03 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
-2024-03-24 13:56:03 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@67fc2ecb
-2024-03-24 13:56:03 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
-2024-03-24 13:56:03 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-24 13:56:04 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:56:04 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-24 13:56:04 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-24 13:56:04 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-24 13:56:04 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 3.103 seconds (process running for 3.405)
-2024-03-24 13:56:07 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-24 13:56:07 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-24 13:56:07 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2024-03-24 13:56:07 ERROR r.f.d.d.exception.ExceptionAdvice handleException - When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
-2024-03-24 13:56:07 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.]
-2024-03-24 13:56:27 ERROR r.f.d.d.exception.ExceptionAdvice handleException - When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
-2024-03-24 13:56:27 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.]
-2024-03-24 13:56:38 ERROR r.f.d.d.exception.ExceptionAdvice handleException - When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
-2024-03-24 13:56:38 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.]
-2024-03-24 13:57:04 ERROR r.f.d.d.exception.ExceptionAdvice handleException - When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
-2024-03-24 13:57:04 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.]
-2024-03-24 13:57:04 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener onApplicationEvent - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2024-03-24 13:57:04 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:57:04 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
-2024-03-24 13:57:04 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
-2024-03-24 13:57:04 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 4055 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
-2024-03-24 13:57:04 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-24 13:57:04 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
-2024-03-24 13:57:05 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-24 13:57:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-24 13:57:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 8 ms. Found 4 JPA repository interfaces.
-2024-03-24 13:57:05 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-24 13:57:05 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-24 13:57:05 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-24 13:57:05 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-24 13:57:05 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 171 ms
-2024-03-24 13:57:05 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-24 13:57:05 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-24 13:57:05 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-24 13:57:05 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-2 - Starting...
-2024-03-24 13:57:05 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@4469ba7a
-2024-03-24 13:57:05 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-2 - Start completed.
-2024-03-24 13:57:05 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-24 13:57:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:57:05 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-24 13:57:05 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-24 13:57:05 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-24 13:57:05 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 1.15 seconds (process running for 64.713)
-2024-03-24 13:57:05 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener onApplicationEvent - Condition evaluation unchanged
-2024-03-24 13:57:10 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-24 13:57:10 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-24 13:57:10 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 2 ms
-2024-03-24 13:57:10 ERROR r.f.d.d.exception.ExceptionAdvice handleException - When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.
-2024-03-24 13:57:10 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [java.lang.IllegalArgumentException: When allowCredentials is true, allowedOrigins cannot contain the special value "*" since that cannot be set on the "Access-Control-Allow-Origin" response header. To allow credentials to a set of origins, list them explicitly or consider using "allowedOriginPatterns" instead.]
-2024-03-24 13:57:16 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:57:16 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-2 - Shutdown initiated...
-2024-03-24 13:57:16 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-2 - Shutdown completed.
-2024-03-24 13:57:18 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 4115 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
-2024-03-24 13:57:18 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2024-03-24 13:57:18 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-03-24 13:57:18 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-03-24 13:57:18 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
-2024-03-24 13:57:18 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
-2024-03-24 13:57:19 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-24 13:57:19 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 4 JPA repository interfaces.
-2024-03-24 13:57:19 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
-2024-03-24 13:57:19 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2024-03-24 13:57:19 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-24 13:57:19 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2024-03-24 13:57:19 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 701 ms
-2024-03-24 13:57:19 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-24 13:57:19 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-24 13:57:19 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
-2024-03-24 13:57:19 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-24 13:57:19 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
-2024-03-24 13:57:19 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@541191d1
-2024-03-24 13:57:19 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
-2024-03-24 13:57:20 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-24 13:57:20 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:57:20 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-24 13:57:20 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
-2024-03-24 13:57:21 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
-2024-03-24 13:57:21 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 2.913 seconds (process running for 3.38)
-2024-03-24 13:57:25 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-24 13:57:25 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2024-03-24 13:57:25 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2024-03-24 13:57:25 INFO  r.f.d.a.category.CategoryService createCategory - CategoryService.Category | save category with title = Документы
-2024-03-24 13:58:14 INFO  r.f.d.a.category.CategoryService createCategory - CategoryService.Category | save category with title = Лицензии
-2024-03-24 13:59:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-24 13:59:32 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
-2024-03-24 13:59:32 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2024-03-26 19:33:19 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 24124 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
+2024-03-26 19:33:19 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-03-26 19:33:19 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-26 19:33:19 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-26 19:33:19 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
+2024-03-26 19:33:20 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
+2024-03-26 19:33:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-26 19:33:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
+2024-03-26 19:33:21 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
+2024-03-26 19:33:21 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2024-03-26 19:33:21 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-26 19:33:21 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2024-03-26 19:33:21 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 804 ms
+2024-03-26 19:33:21 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-26 19:33:21 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-26 19:33:21 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
+2024-03-26 19:33:21 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-26 19:33:21 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2024-03-26 19:33:21 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4da6c53e
+2024-03-26 19:33:21 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2024-03-26 19:33:22 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-26 19:33:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-26 19:33:22 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-26 19:33:22 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
+2024-03-26 19:33:22 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
+2024-03-26 19:33:22 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 3.319 seconds (process running for 3.808)
+2024-03-26 19:37:14 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-26 19:37:14 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2024-03-26 19:37:14 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2024-03-26 19:37:14 INFO  o.s.api.AbstractOpenApiResource getOpenApi - Init duration for springdoc-openapi is: 255 ms
+2024-03-26 20:07:30 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:07:30 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:07:35 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:07:35 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:07:49 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:07:49 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:08:07 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:08:07 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:08:26 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:08:26 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:08:33 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:08:33 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:08:43 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:08:43 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:08:44 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:08:44 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:08:54 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:08:54 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:09:40 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:09:40 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:10:39 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:10:39 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:11:45 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:11:45 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:21:27 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener onApplicationEvent - Restarting due to 47 class path changes (0 additions, 47 deletions, 0 modifications)
+2024-03-26 20:21:27 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-26 20:21:27 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2024-03-26 20:21:27 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2024-03-26 20:21:27 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 24124 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
+2024-03-26 20:21:27 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-03-26 20:21:27 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
+2024-03-26 20:21:28 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
+2024-03-26 20:21:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-26 20:21:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2024-03-26 20:21:28 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
+2024-03-26 20:21:28 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2024-03-26 20:21:28 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-26 20:21:28 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2024-03-26 20:21:28 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 147 ms
+2024-03-26 20:21:28 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-26 20:21:28 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
+2024-03-26 20:21:28 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-26 20:21:28 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-2 - Starting...
+2024-03-26 20:21:28 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@77ad9a78
+2024-03-26 20:21:28 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-2 - Start completed.
+2024-03-26 20:21:28 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-26 20:21:28 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-26 20:21:28 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-26 20:21:28 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
+2024-03-26 20:21:28 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
+2024-03-26 20:21:28 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 0.984 seconds (process running for 2889.526)
+2024-03-26 20:21:28 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener onApplicationEvent - Condition evaluation unchanged
+2024-03-26 20:22:53 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-26 20:22:53 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-2 - Shutdown initiated...
+2024-03-26 20:22:53 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-2 - Shutdown completed.
+2024-03-26 20:26:07 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 26407 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
+2024-03-26 20:26:07 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-03-26 20:26:07 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-26 20:26:07 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-26 20:26:07 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
+2024-03-26 20:26:08 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
+2024-03-26 20:26:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-26 20:26:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
+2024-03-26 20:26:09 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
+2024-03-26 20:26:09 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2024-03-26 20:26:09 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-26 20:26:09 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2024-03-26 20:26:09 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 719 ms
+2024-03-26 20:26:09 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-26 20:26:09 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-26 20:26:09 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
+2024-03-26 20:26:09 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-26 20:26:09 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2024-03-26 20:26:09 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3ba1a424
+2024-03-26 20:26:09 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2024-03-26 20:26:10 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-26 20:26:10 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-26 20:26:10 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-26 20:26:10 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
+2024-03-26 20:26:10 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
+2024-03-26 20:26:10 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 3.516 seconds (process running for 3.861)
+2024-03-26 20:26:14 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-26 20:26:14 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2024-03-26 20:26:14 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2024-03-26 20:26:14 INFO  o.s.api.AbstractOpenApiResource getOpenApi - Init duration for springdoc-openapi is: 230 ms
+2024-03-26 20:31:14 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:31:14 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:31:14 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:31:14 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:31:14 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:31:14 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:31:14 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:31:14 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:31:14 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:33:27 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:33:27 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:33:27 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:33:27 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:33:27 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:33:27 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:33:27 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:33:27 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:33:27 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:34:02 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:34:02 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:34:02 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:34:02 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:34:02 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:34:02 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:34:02 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:34:02 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:34:02 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:34:41 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:34:41 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:34:41 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:34:41 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:34:41 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:34:41 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:34:41 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:34:41 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:34:41 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:34:41 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener onApplicationEvent - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-03-26 20:34:41 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-26 20:34:41 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2024-03-26 20:34:41 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2024-03-26 20:34:41 INFO  r.f.d.DocumentsServiceApplication logStarting - Starting DocumentsServiceApplication using Java 17.0.10 with PID 26407 (/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/build/classes/java/main started by ivanberezuckij in /Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend)
+2024-03-26 20:34:41 INFO  r.f.d.DocumentsServiceApplication logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-03-26 20:34:41 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager getComposeFile - Using Docker Compose file '/Users/ivanberezuckij/work/it-park/lessons/spring/documents-service-app/backend/docker-compose.yaml'
+2024-03-26 20:34:42 INFO  o.s.b.d.c.l.DockerComposeLifecycleManager start - There are already Docker Compose services running, skipping startup
+2024-03-26 20:34:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-26 20:34:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 9 ms. Found 4 JPA repository interfaces.
+2024-03-26 20:34:42 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port 8080 (http)
+2024-03-26 20:34:42 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2024-03-26 20:34:42 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-26 20:34:42 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2024-03-26 20:34:42 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 255 ms
+2024-03-26 20:34:42 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-26 20:34:42 INFO  o.h.c.i.RegionFactoryInitiator initiateService - HHH000026: Second-level cache disabled
+2024-03-26 20:34:42 INFO  o.s.o.j.p.SpringPersistenceUnitInfo addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-26 20:34:42 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-2 - Starting...
+2024-03-26 20:34:42 INFO  com.zaxxer.hikari.pool.HikariPool checkFailFast - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@7ed030
+2024-03-26 20:34:42 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-2 - Start completed.
+2024-03-26 20:34:42 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-26 20:34:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-26 20:34:43 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-26 20:34:43 INFO  o.s.b.d.a.OptionalLiveReloadServer startServer - LiveReload server is running on port 35729
+2024-03-26 20:34:43 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port 8080 (http) with context path ''
+2024-03-26 20:34:43 INFO  r.f.d.DocumentsServiceApplication logStarted - Started DocumentsServiceApplication in 1.29 seconds (process running for 516.217)
+2024-03-26 20:34:43 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener onApplicationEvent - Condition evaluation unchanged
+2024-03-26 20:34:46 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-26 20:34:46 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2024-03-26 20:34:46 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 0 ms
+2024-03-26 20:34:46 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:34:46 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:34:46 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:34:46 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:34:46 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:34:46 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:35:17 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:35:17 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:35:17 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:35:17 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:35:17 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:35:17 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:35:39 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:35:39 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:35:39 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:35:39 ERROR r.f.d.a.document.DocumentService lambda$findById$0 - Документ с id=1 не найден
+2024-03-26 20:35:39 ERROR r.f.d.d.exception.ExceptionAdvice handleNotFoundException - Документ не найден
+2024-03-26 20:35:39 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver logException - Resolved [jakarta.persistence.EntityNotFoundException: Документ не найден]
+2024-03-26 20:47:46 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:47:46 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:48:55 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:48:55 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:50:59 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:50:59 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:51:43 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:51:43 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:52:03 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:52:03 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:52:28 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:52:28 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:52:54 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:52:54 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:54:20 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:54:20 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:56:16 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:56:16 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:56:25 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:56:25 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:56:28 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:56:28 INFO  r.f.d.a.category.CategoryService findAll - CategoryService.Category | Find all categories
+2024-03-26 20:58:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-26 20:58:01 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-2 - Shutdown initiated...
+2024-03-26 20:58:01 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-2 - Shutdown completed.
